@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -9,21 +9,21 @@ small, strike, strong, sub, sup, tt, var, b,
 u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
+canvas, details, embed, figure, figcaption, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
 	display: block;}
+	
 
 body {
 	line-height: 1;
@@ -69,34 +69,59 @@ input, select, textarea {
 }
 
 .line-1{
-    position: relative;
-    top: 50%;  
-    width: 32em;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);    
-}
+	position: relative;
+	top: 50%;  
+	width: 30em;
+	margin: 0 auto;
+	border-right: 2px solid rgba(255,255,255,.75);
+	font-size: 180%;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	transform: translateY(-50%);    
+	font-family: 'DotGothic16', sans-serif;
+  }
+  
+  /* Animation */
+  .anim-typewriter{
+	animation: typewriter 4s steps(44) 1s 1 normal both,
+			   blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  
+  .anim-typewriter-delayed{
+	animation: typewriter1 2s steps(22) 1s 1 normal both,
+			   blinkTextCursor-delayed 500ms steps(22) infinite normal;   
+  }
+  
+  @keyframes typewriter{
+	from{width: 0;}
+	to{width: 30em;}
+  }
 
+  @keyframes typewriter1{
+	from{width: 0;}
+	to{width: 12.5em;}
+  }
+  
+  @keyframes blinkTextCursor{
+	from{border-right-color:  rgba(255,255,255,.75);}
+	to{border-right-color: transparent;}
+  }
 
-/* Animation */
-.anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) normal;
-}
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 32em;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}
-
-
+  @keyframes blinkTextCursor-delayed {
+	0% {
+	  border-right-color: rgba(255,255,255,.75);
+	}
+	50% {
+	  border-right-color: transparent;
+	}
+	100% {
+	  border-right-color: rgba(255,255,255,.75);
+	}
+	
+  }
+  
+  
 
 .wave {
 	animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
@@ -254,6 +279,7 @@ input, select, textarea {
 		font-size: 1.5rem;
 		line-height: 1.4;
 		letter-spacing: 0.5rem;
+		font-family: 'DotGothic16', sans-serif;
 	}
 
 	h3 {
@@ -650,6 +676,7 @@ input, select, textarea {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+		
 	}
 
 		.icon:before {
@@ -995,7 +1022,7 @@ input, select, textarea {
 			table tbody tr:nth-child(2n + 1) {
 				background-color: rgba(255, 255, 255, 0.075);
 			}
-
+ 
 		table td {
 			padding: 0.75em 0.75em;
 		}
@@ -1306,6 +1333,10 @@ input, select, textarea {
 		background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		max-width: 100%;
 		text-align: center;
+		
+		
+		
+		
 	}
 
 		#header > * {
@@ -1315,6 +1346,8 @@ input, select, textarea {
 			transition: opacity 0.325s ease-in-out;
 			position: relative;
 			margin-top: 3.5rem;
+			
+			
 		}
 
 			#header > *:before {
@@ -1326,6 +1359,7 @@ input, select, textarea {
 				width: 1px;
 				height: calc(3.5rem + 1px);
 				background: #ffffff;
+				
 			}
 
 		#header > :first-child {
@@ -1336,16 +1370,29 @@ input, select, textarea {
 				display: none;
 			}
 
-		#header .logo {
-			width: 5.5rem;
-			height: 5.5rem;
-			line-height: 5.5rem;
-			border: solid 1px #ffffff;
-			border-radius: 100%;
-		}
+			#header .logo {
+				width: 11rem;
+				height: 11rem;
+				line-height: 5.5rem;
+				border: solid 1px #ffffff;
+				border-radius: 100%;
+			}
+
+			#header .logo img {
+				max-width: 100%;
+				max-height: 100%;
+				border-radius: 100%;
+				transform: scale(1.07, 1.07);
+				
+			  }
+			  
+			
 
 			#header .logo .icon:before {
 				font-size: 2rem;
+				
+				
+				
 			}
 
 		#header .content {
@@ -1354,6 +1401,9 @@ input, select, textarea {
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 			max-width: 100%;
+			
+			
+			
 		}
 
 			#header .content .inner {
@@ -1368,6 +1418,7 @@ input, select, textarea {
 				padding: 3rem 2rem;
 				max-height: 40rem;
 				overflow: hidden;
+				
 			}
 
 				#header .content .inner > :last-child {
@@ -1379,6 +1430,7 @@ input, select, textarea {
 				letter-spacing: 0.2rem;
 				font-size: 0.8rem;
 				line-height: 2;
+				
 			}
 
 		#header nav ul {
@@ -1391,6 +1443,7 @@ input, select, textarea {
 			padding-left: 0;
 			border: solid 1px #ffffff;
 			border-radius: 4px;
+			font-family: 'DotGothic16', sans-serif;
 		}
 
 			#header nav ul li {
@@ -1489,13 +1542,18 @@ input, select, textarea {
 				}
 
 			#header .logo {
+			
 				width: 4.75rem;
 				height: 4.75rem;
 				line-height: 4.75rem;
+				
+				
+			
 			}
 
 				#header .logo .icon:before {
 					font-size: 1.75rem;
+					
 				}
 
 			#header .content .inner {
@@ -1512,6 +1570,7 @@ input, select, textarea {
 
 			#header {
 				padding: 1.5rem 0;
+				
 			}
 
 				#header .content .inner {
@@ -1525,6 +1584,7 @@ input, select, textarea {
 					flex-direction: column;
 					min-width: 10rem;
 					max-width: 100%;
+					
 				}
 
 					#header nav ul li {
@@ -1579,6 +1639,8 @@ input, select, textarea {
 		position: relative;
 		max-width: 100%;
 		z-index: 3;
+		
+		
 	}
 
 		#main article {
@@ -1597,6 +1659,7 @@ input, select, textarea {
 			background-color: rgba(27, 31, 34, 0.85);
 			border-radius: 4px;
 			opacity: 0;
+			
 		}
 
 			#main article.active {
@@ -1651,6 +1714,7 @@ input, select, textarea {
 
 			#main article {
 				padding: 3.5rem 2rem 0.5rem 2rem ;
+				
 			}
 
 				#main article .close:before {
@@ -1673,6 +1737,11 @@ input, select, textarea {
 
 /* Footer */
 
+footer {
+	font-family: 'DotGothic16', sans-serif;
+
+}
+
 	#footer {
 		-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
@@ -1682,6 +1751,7 @@ input, select, textarea {
 		max-width: 100%;
 		margin-top: 2rem;
 		text-align: center;
+		
 	}
 
 		#footer .copyright {

@@ -3,13 +3,12 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="100" height="100">
   </a>
-
 <h3 align="center">Andrew's Portfolio Website</h3>
 
   <p align="center">
-    <a href="https://andreoliveira.art">**View Demo**</a>
+    <a href="https://andreoliveira.art">View Demo</a>
     ·
     <a href="https://github.com/it0na72/portfolio/issues">Report Bug</a>
     ·

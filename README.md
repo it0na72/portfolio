@@ -9,10 +9,7 @@
 <h3 align="center">Andrew's Portfolio Website</h3>
 
   <p align="center">
-    My personal website to showcase my projects
-    <br />
-    <br />
-    <a href="https://andreoliveira.art">View Demo</a>
+    <a href="https://andreoliveira.art">**View Demo**</a>
     ·
     <a href="https://github.com/it0na72/portfolio/issues">Report Bug</a>
     ·
@@ -34,17 +31,10 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -53,9 +43,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -63,9 +50,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![SASS][https://sass-lang.com/]][JQuery-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* SASS CSS
+* Vanilla JS
+* TypedJS
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -79,15 +66,6 @@ To get a local copy up and running follow these simple example steps.
     - git clone https://github.com/it0na72/portfolio.git
 
 After cloning this repo you should be able to change your details as needed.
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Add screenshots of mockups
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ROADMAP -->

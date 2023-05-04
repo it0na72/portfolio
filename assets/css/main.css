@@ -95,12 +95,12 @@ input, select, textarea {
   
   @keyframes typewriter{
 	from{width: 0;}
-	to{width: 26.3em;}
+	to{width: 27.8em;}
   }
 
   @keyframes typewriter1{
 	from{width: 0;}
-	to{width: 12.5em;}
+	to{width: 13em;}
   }
   
   @keyframes blinkTextCursor{

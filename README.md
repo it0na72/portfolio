@@ -38,7 +38,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-![sPffl9i0Yg](https://user-images.githubusercontent.com/56265972/235369626-30ef03cc-a6d6-420a-89ba-d2f69cd30c69.jpg)
+![dEJu8K6Xf7](https://user-images.githubusercontent.com/56265972/236639436-18f1914d-a1b6-4233-8298-a26b28c24c3e.png)
 
 Gained proficiency using SASS CSS, TypedJS and Vanilla Javascript.
 

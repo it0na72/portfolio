@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/it0na72/portfolio">
     <img src="images/logo.png" alt="Logo" width="100" height="100">
   </a>
 <h3 align="center">Andrew's Portfolio Website</h3>
@@ -21,9 +21,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>

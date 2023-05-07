@@ -60,7 +60,7 @@ After cloning this repo you should be able to change your details as needed.
 - [ ] Update form to a better provider
 
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/github_username/portfolio/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -84,6 +84,6 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-You can contact me at - andrew98gio@gmail.com
+You can contact me at - andrew@andreoliveira.art
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

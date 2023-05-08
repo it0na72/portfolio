@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/it0na72/portfolio">
     <img src="images/logo.png" alt="Logo" width="100" height="100">
   </a>
 <h3 align="center">Andrew's Portfolio Website</h3>
@@ -21,9 +21,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -38,7 +35,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-![sPffl9i0Yg](https://user-images.githubusercontent.com/56265972/235369626-30ef03cc-a6d6-420a-89ba-d2f69cd30c69.jpg)
+![dEJu8K6Xf7](https://user-images.githubusercontent.com/56265972/236639436-18f1914d-a1b6-4233-8298-a26b28c24c3e.png)
 
 Gained proficiency using SASS CSS, TypedJS and Vanilla Javascript.
 
@@ -63,7 +60,7 @@ After cloning this repo you should be able to change your details as needed.
 - [ ] Update form to a better provider
 
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/github_username/portfolio/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,6 +84,6 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-You can contact me at - andrew98gio@gmail.com
+You can contact me at - andrew@andreoliveira.art
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

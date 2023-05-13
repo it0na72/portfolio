@@ -57,7 +57,7 @@ After cloning this repo you should be able to change your details as needed.
 
 - [ ] Add more projects
 - [ ] Change skills section 
-- [ ] Update form to a better provider
+- [ ] Update contact form to a better provider
 - [ ] Change website to scrolling 
 
 

@@ -59,6 +59,7 @@ After cloning this repo you should be able to change your details as needed.
 - [ ] Change skills section 
 - [ ] Update contact form to a better provider
 - [ ] Change website to scrolling 
+- [ ] Fix website on iphones not displaying typewriting effect
 
 
 See the [open issues](https://github.com/github_username/portfolio/issues) for a full list of proposed features (and known issues).

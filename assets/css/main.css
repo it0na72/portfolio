@@ -84,39 +84,62 @@ input, select, textarea {
   
   /* Animation */
   .anim-typewriter{
-	animation: typewriter 4s steps(44) 1s 1 normal both,
-			   blinkTextCursor 500ms steps(44) infinite normal;
+	-webkit-animation: typewriter 4s steps(45) 1s 1 normal both, blinkTextCursor 500ms steps(45) infinite normal;
+	animation: typewriter 4s steps(45) 1s 1 normal both,
+			   blinkTextCursor 500ms steps(45) infinite normal;
   }
   
   .anim-typewriter-delayed{
-	animation: typewriter1 2s steps(22) 1s 1 normal both,
-			   blinkTextCursor-delayed 500ms steps(22) infinite normal;   
+	-webkit-animation: typewriter1 2s steps(23) 1s 1 normal both, blinkTextCursor-delayed 500ms steps(23) infinite normal;
+	animation: typewriter1 2s steps(23) 1s 1 normal both,
+			   blinkTextCursor-delayed 500ms steps(23) infinite normal;   
   }
-  
+
+  @-webkit-keyframes typewriter {
+	from { width: 0; }
+	to { width: 28em; }
+}
+
   @keyframes typewriter{
 	from{width: 0;}
-	to{width: 27.8em;}
+	to{width: 28em;}
   }
+
+  @-webkit-keyframes typewriter1 {
+	from { width: 0; }
+	to { width: 13.2em; }
+}
 
   @keyframes typewriter1{
 	from{width: 0;}
-	to{width: 13em;}
+	to{width: 13.2em;}
   }
   
+  @-webkit-keyframes blinkTextCursor {
+	from { border-right-color: rgba(255, 255, 255); }
+	to { border-right-color: transparent; }
+}
+  
   @keyframes blinkTextCursor{
-	from{border-right-color:  rgba(255,255,255,.75);}
+	from{border-right-color:  rgba(255,255,255);}
 	to{border-right-color: transparent;}
   }
 
+  @-webkit-keyframes blinkTextCursor-delayed {
+	0% { border-right-color: transparent; }
+	50% { border-right-color: transparent; }
+	100% { border-right-color: rgba(255, 255, 255); } 
+}
+
   @keyframes blinkTextCursor-delayed {
 	0% {
-	  border-right-color: rgba(255,255,255,.75);
+	  border-right-color: transparent;
 	}
 	50% {
 	  border-right-color: transparent;
 	}
 	100% {
-	  border-right-color: rgba(255,255,255,.75);
+	  border-right-color:  rgba(255,255,255);
 	}
 	
   }

@@ -60,6 +60,7 @@ After cloning this repo you should be able to change your details as needed.
 - [ ] Update contact form to a better provider
 - [ ] Change website to scrolling 
 - [ ] Fix website on iphones not displaying typewriting effect
+- [ ] Add cursor trail effect with threeJS
 
 
 See the [open issues](https://github.com/github_username/portfolio/issues) for a full list of proposed features (and known issues).

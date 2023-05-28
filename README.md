@@ -59,7 +59,7 @@ After cloning this repo you should be able to change your details as needed.
 - [ ] Change skills section 
 - [ ] Update contact form to a better provider
 - [ ] Change website to scrolling 
-- [ ] Fix website on iphones not displaying typewriting effect
+- [x] Fix website on iphones not displaying typewriting effect
 - [ ] Add cursor trail effect with threeJS or other framework
 
 

@@ -61,6 +61,9 @@ After cloning this repo you should be able to change your details as needed.
 - [ ] Change website to scrolling 
 - [x] Fix website on iphones not displaying typewriting effect
 - [ ] Add cursor trail effect with threeJS or other framework
+- [ ] Change color pallet
+- [ ] Improve logo in main page 
+
 
 
 See the [open issues](https://github.com/github_username/portfolio/issues) for a full list of proposed features (and known issues).

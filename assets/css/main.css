@@ -175,10 +175,10 @@ textarea {
 }
 
 .anim-typewriter-delayed {
-  -webkit-animation: typewriter1 2s steps(23) 1s 1 normal both,
-    blinkTextCursor-delayed 500ms steps(23) infinite normal;
-  animation: typewriter1 2s steps(23) 1s 1 normal both,
-    blinkTextCursor-delayed 500ms steps(23) infinite normal;
+  -webkit-animation: typewriter1 2s steps(20) 5s 1 normal both,
+    blinkTextCursor-delayed 500ms steps(20) infinite normal;
+  animation: typewriter1 1.8s steps(20) 5s 1 normal both,
+    blinkTextCursor-delayed 500ms steps(20) infinite normal;
 }
 
 @-webkit-keyframes typewriter {
@@ -191,6 +191,15 @@ textarea {
 }
 
 @keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 28em;
+  }
+}
+
+@-moz-keyframes typewriter {
   from {
     width: 0;
   }
@@ -217,45 +226,48 @@ textarea {
   }
 }
 
-@-webkit-keyframes blinkTextCursor {
+@-moz-keyframes typewriter1 {
   from {
-    border-right-color: rgba(255, 255, 255);
+    width: 0;
   }
   to {
-    border-right-color: transparent;
+    width: 28em;
+  }
+}
+
+@-webkit-keyframes blinkTextCursor {
+  50% {
+    border-color: transparent;
   }
 }
 
 @keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255);
+  50% {
+    border-color: transparent;
   }
-  to {
-    border-right-color: transparent;
+}
+
+@-moz-keyframes blinkTextCursor {
+  50% {
+    border-color: transparent;
   }
 }
 
 @-webkit-keyframes blinkTextCursor-delayed {
-  0% {
-    border-right-color: transparent;
-  }
   50% {
-    border-right-color: transparent;
-  }
-  100% {
-    border-right-color: rgba(255, 255, 255);
+    border-color: transparent;
   }
 }
 
 @keyframes blinkTextCursor-delayed {
-  0% {
-    border-right-color: transparent;
-  }
   50% {
-    border-right-color: transparent;
+    border-color: transparent;
   }
-  100% {
-    border-right-color: rgba(255, 255, 255);
+}
+
+@-moz-keyframes blinkTextCursor-delayed {
+  50% {
+    border-color: transparent;
   }
 }
 

@@ -274,7 +274,7 @@
     }
   });
 
-  // Language object with translations
+  // language object with translations
   const translations = {
     pt: {
       greeting: "Comékie? Sou o Gio<span class='wave'>👋</span>",
@@ -283,6 +283,7 @@
       youtube: "YOUTUBE",
       classes: "AULAS",
       emailMessage: "Alguma dúvida? Manda-me um email!",
+      developed: "Criado por Giovani Oliveira",
     },
     en: {
       greeting: "Hey! I'm Gio<span class='wave'>👋</span>",
@@ -291,34 +292,56 @@
       youtube: "YOUTUBE",
       classes: "LESSONS",
       emailMessage: "Any questions? Send me an email!",
+      developed: "Developed by Giovani Oliveira",
     },
     jp: {
       greeting: "どーも！ジオです<span class='wave'>👋</span>",
       description: "晴耕雨読を望む言語学と読書好きなポルトガル人",
       japaneseTranslation: "翻訳家と編集者",
-      youtube: "ユーチューブ",
-      classes: "クラス",
+      youtube: "Youtube",
+      classes: "レッソン",
       emailMessage: "質問とかありますか？メールを送ってください！",
+      developed: "開発者: ジオバニ・オリベイラ",
     },
   };
 
-  // Function to change language
+  // function to change language
   function changeLanguage() {
     let currentLang = localStorage.getItem("lang") || "pt";
-    console.log("Current Language:", currentLang);
+
+    // cycle through languages
     let newLang =
       currentLang === "pt" ? "en" : currentLang === "en" ? "jp" : "pt";
-    console.log("New Language:", newLang);
     localStorage.setItem("lang", newLang);
+
     updateLanguage(newLang);
+    updateLanguageButton(newLang);
   }
 
-  // Function to update text with typewriter effect
+  // function to update button icon/text
+  function updateLanguageButton(lang) {
+    const languageButton = document.getElementById("btn");
+    const languageIcon = document.getElementById("language-icon");
+
+    // update button icon and tooltip based on next language
+    if (lang === "pt") {
+      languageIcon.className = "fa fa-globe"; // switch to English icon
+      languageButton.title = "Switch to English";
+    } else if (lang === "en") {
+      languageIcon.className = "fa fa-torii-gate"; // switch to Japanese icon
+      languageButton.title = "日本語に変更";
+    } else {
+      languageIcon.className = "fa fa-font"; // back to Portuguese icon
+      languageButton.title = "Mudar para Português";
+    }
+  }
+
+  // function to update text with typewriter effect
   function updateLanguage(lang) {
     document.getElementById("greeting").innerHTML =
       translations[lang]["greeting"];
 
-    // Restart typewriter effect
+    // restart typewriter effect
     typeWriterEffect("description", translations[lang]["description"]);
     typeWriterEffect(
       "japaneseTranslation",
@@ -331,6 +354,8 @@
       translations[lang]["classes"];
     document.getElementById("emailMessage").textContent =
       translations[lang]["emailMessage"];
+    document.getElementById("developed").textContent =
+      translations[lang]["developed"];
   }
 
   window.changeLanguage = changeLanguage;
@@ -352,10 +377,11 @@
     type();
   }
 
-  // Load stored language when page loads
+  // load stored language when page loads
   document.addEventListener("DOMContentLoaded", () => {
     let storedLang = localStorage.getItem("lang") || "pt";
     updateLanguage(storedLang);
+    updateLanguageButton(storedLang);
   });
 
   $window.on("hashchange", function (event) {

@@ -363,7 +363,7 @@
         if (i < text.length) {
           element.textContent += text.charAt(i);
           i++;
-          element.typewriterTimeout = setTimeout(type, 50); // Adjust speed here
+          element.typewriterTimeout = setTimeout(type, 0); // adjust speed here
         }
       }
 

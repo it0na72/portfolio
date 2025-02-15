@@ -2,7 +2,7 @@
   <a href="https://andreoliveira.pro">
     <img src="images/logo.png" alt="Logo" width="100" height="100">
   </a>
-<h3 align="center">Andrew's Portfolio Website</h3>
+<h3 align="center">Gio's Portfolio Website</h3>
 
   <p align="center">
     <a href="https://andreoliveira.pro"><b>View Demo</b></a>

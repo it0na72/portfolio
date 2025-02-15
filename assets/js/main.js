@@ -274,6 +274,90 @@
     }
   });
 
+  // Language object with translations
+  const translations = {
+    pt: {
+      greeting: "Comékie? Sou o Gio<span class='wave'>👋</span>",
+      description: "Tradutor de Japonês e Editor de Vídeo",
+      japaneseTranslation: "翻訳家と編集者",
+      youtube: "YOUTUBE",
+      classes: "AULAS",
+      emailMessage: "Alguma dúvida? Manda-me um email!",
+    },
+    en: {
+      greeting: "Hey! I'm Gio<span class='wave'>👋</span>",
+      description: "Japanese Translator and Video Editor",
+      japaneseTranslation: "翻訳家と編集者",
+      youtube: "YOUTUBE",
+      classes: "LESSONS",
+      emailMessage: "Any questions? Send me an email!",
+    },
+    jp: {
+      greeting: "どーも！ジオです<span class='wave'>👋</span>",
+      description: "晴耕雨読を望む言語学と読書好きなポルトガル人",
+      japaneseTranslation: "翻訳家と編集者",
+      youtube: "ユーチューブ",
+      classes: "クラス",
+      emailMessage: "質問とかありますか？メールを送ってください！",
+    },
+  };
+
+  // Function to change language
+  function changeLanguage() {
+    let currentLang = localStorage.getItem("lang") || "pt";
+    console.log("Current Language:", currentLang);
+    let newLang =
+      currentLang === "pt" ? "en" : currentLang === "en" ? "jp" : "pt";
+    console.log("New Language:", newLang);
+    localStorage.setItem("lang", newLang);
+    updateLanguage(newLang);
+  }
+
+  // Function to update text with typewriter effect
+  function updateLanguage(lang) {
+    document.getElementById("greeting").innerHTML =
+      translations[lang]["greeting"];
+
+    // Restart typewriter effect
+    typeWriterEffect("description", translations[lang]["description"]);
+    typeWriterEffect(
+      "japaneseTranslation",
+      translations[lang]["japaneseTranslation"]
+    );
+
+    document.getElementById("youtube").textContent =
+      translations[lang]["youtube"];
+    document.getElementById("lessons").textContent =
+      translations[lang]["classes"];
+    document.getElementById("emailMessage").textContent =
+      translations[lang]["emailMessage"];
+  }
+
+  window.changeLanguage = changeLanguage;
+
+  // Typewriter Effect Function
+  function typeWriterEffect(elementId, text) {
+    let element = document.getElementById(elementId);
+    element.textContent = ""; // Clear existing text
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 50); // Adjust speed here
+      }
+    }
+
+    type();
+  }
+
+  // Load stored language when page loads
+  document.addEventListener("DOMContentLoaded", () => {
+    let storedLang = localStorage.getItem("lang") || "pt";
+    updateLanguage(storedLang);
+  });
+
   $window.on("hashchange", function (event) {
     // Empty hash?
     if (location.hash == "" || location.hash == "#") {

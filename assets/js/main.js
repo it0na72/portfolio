@@ -348,6 +348,28 @@
       translations[lang]["japaneseTranslation"]
     );
 
+    // Typewriter Effect Function with proper reset
+    function typeWriterEffect(elementId, text) {
+      let element = document.getElementById(elementId);
+      element.textContent = ""; // Clear existing text
+      let i = 0;
+
+      // Ensure any previous typing is stopped
+      if (element.typewriterTimeout) {
+        clearTimeout(element.typewriterTimeout);
+      }
+
+      function type() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          element.typewriterTimeout = setTimeout(type, 50); // Adjust speed here
+        }
+      }
+
+      type();
+    }
+
     document.getElementById("youtube").textContent =
       translations[lang]["youtube"];
     document.getElementById("lessons").textContent =
@@ -377,12 +399,22 @@
     type();
   }
 
-  // load stored language when page loads
+  // Load stored language on page load (WITH typewriter effect)
   document.addEventListener("DOMContentLoaded", () => {
     let storedLang = localStorage.getItem("lang") || "pt";
-    updateLanguage(storedLang);
-    updateLanguageButton(storedLang);
+    updateLanguage(storedLang, true); // Enable typewriter effect on first load
   });
+
+  // Language switch function (NO typewriter effect when switching)
+  function changeLanguage() {
+    let currentLang = localStorage.getItem("lang") || "pt";
+    let newLang =
+      currentLang === "pt" ? "en" : currentLang === "en" ? "jp" : "pt";
+
+    localStorage.setItem("lang", newLang);
+    updateLanguage(newLang, false); // No typewriter effect when switching languages
+    updateLanguageButton(newLang);
+  }
 
   $window.on("hashchange", function (event) {
     // Empty hash?

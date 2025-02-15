@@ -168,8 +168,8 @@ textarea {
 
 /* Animation */
 .anim-typewriter {
-  -webkit-animation: typewriter 4s steps(45) 1s 1 normal both,
-    blinkTextCursor 500ms steps(45) infinite normal;
+  -webkit-animation: typewriter 4s steps(20) 1s 1 normal both,
+    blinkTextCursor 500ms steps(35) infinite normal;
   animation: typewriter 4s steps(45) 1s 1 normal both,
     blinkTextCursor 500ms steps(45) infinite normal;
 }
@@ -195,7 +195,7 @@ textarea {
     width: 0;
   }
   to {
-    width: 28em;
+    width: 26em;
   }
 }
 
@@ -222,7 +222,7 @@ textarea {
     width: 0;
   }
   to {
-    width: 13.2em;
+    width: 9.5em;
   }
 }
 

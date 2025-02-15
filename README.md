@@ -55,15 +55,15 @@ After cloning this repo you should be able to change your details as needed.
 ## Roadmap
 
 - [x] Add more projects
-- [ ] Change skills section
-- [ ] Update contact form to a better provider
-- [ ] Change website to scrolling
+- [x] Change skills section
+- [x] Update contact form to a better provider
+- [x] Change website to scrolling
 - [x] Fix website on iphones not displaying typewriting effect
 - [ ] Add cursor trail effect with threeJS or other framework
 - [x] Change color pallet
-- [ ] Improve logo in main page
-- [ ] Update guitar article
-- [ ] Update translation article
+- [x] Improve logo in main page
+- [x] Update guitar article
+- [x] Update translation article
 
 See the [open issues](https://github.com/it0na72/portfolio/issues) for a full list of proposed features (and known issues).
 

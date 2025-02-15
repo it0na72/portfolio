@@ -282,7 +282,7 @@
       japaneseTranslation: "翻訳家と編集者",
       youtube: "YOUTUBE",
       classes: "AULAS",
-      emailMessage: "Alguma dúvida? Manda-me um email!",
+      emailMessage: "Alguma dúvida? Manda-me um email",
       developed: "Criado por Giovani Oliveira",
     },
     en: {
@@ -291,7 +291,7 @@
       japaneseTranslation: "翻訳家と編集者",
       youtube: "YOUTUBE",
       classes: "LESSONS",
-      emailMessage: "Any questions? Send me an email!",
+      emailMessage: "Any questions? Send me an email",
       developed: "Developed by Giovani Oliveira",
     },
     jp: {
@@ -299,8 +299,8 @@
       description: "晴耕雨読を望む言語学と読書好きなポルトガル人",
       japaneseTranslation: "翻訳家と編集者",
       youtube: "Youtube",
-      classes: "レッソン",
-      emailMessage: "質問とかありますか？メールを送ってください！",
+      classes: "レッスン",
+      emailMessage: "お問い合わせはメールでお願いします",
       developed: "開発者: ジオバニ・オリベイラ",
     },
   };
@@ -348,13 +348,13 @@
       translations[lang]["japaneseTranslation"]
     );
 
-    // Typewriter Effect Function with proper reset
+    // typewriter effect function with proper reset
     function typeWriterEffect(elementId, text) {
       let element = document.getElementById(elementId);
-      element.textContent = ""; // Clear existing text
+      element.textContent = ""; // clear existing text
       let i = 0;
 
-      // Ensure any previous typing is stopped
+      // ensure any previous typing is stopped
       if (element.typewriterTimeout) {
         clearTimeout(element.typewriterTimeout);
       }
@@ -392,7 +392,7 @@
       if (i < text.length) {
         element.textContent += text.charAt(i);
         i++;
-        setTimeout(type, 50); // Adjust speed here
+        setTimeout(type, 0); // adjust speed here
       }
     }
 

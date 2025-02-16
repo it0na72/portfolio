@@ -340,6 +340,11 @@
     languageButton.innerHTML = `<i id="language-icon" class="${languageIcon.className}"></i> ${languageTexts[lang]}`;
   }
 
+  document.addEventListener("DOMContentLoaded", () => {
+    let storedLang = localStorage.getItem("lang") || "en";
+    updateLanguageButton(storedLang);
+  });
+
   function updateLanguage(lang) {
     document.getElementById("greeting").innerHTML =
       translations[lang]["greeting"];
@@ -458,8 +463,6 @@
         $window.scrollTop(oldScrollPos);
       });
   }
-
-  // initialize.
 
   // hide main, articles.
   $main.hide();

@@ -318,25 +318,28 @@
     updateLanguageButton(newLang);
   }
 
-  // function to update button icon/text
   function updateLanguageButton(lang) {
     const languageButton = document.getElementById("btn");
     const languageIcon = document.getElementById("language-icon");
 
-    // update button icon and tooltip based on next language
+    const languageTexts = {
+      en: "English",
+      jp: "日本語",
+      pt: "Português",
+    };
+
+    // Update icon class
     if (lang === "pt") {
-      languageIcon.className = "fa fa-globe"; // switch to English icon
-      languageButton.title = "Switch to English";
+      languageIcon.className = "fa fa-font"; // Portuguese icon
     } else if (lang === "en") {
-      languageIcon.className = "fa fa-torii-gate"; // switch to Japanese icon
-      languageButton.title = "日本語に変更";
+      languageIcon.className = "fa fa-globe"; // English icon
     } else {
-      languageIcon.className = "fa fa-font"; // back to Portuguese icon
-      languageButton.title = "Mudar para Português";
+      languageIcon.className = "fa fa-torii-gate"; // Japanese icon
     }
+
+    languageButton.innerHTML = `<i id="language-icon" class="${languageIcon.className}"></i> ${languageTexts[lang]}`;
   }
 
-  // function to update text with typewriter effect
   function updateLanguage(lang) {
     document.getElementById("greeting").innerHTML =
       translations[lang]["greeting"];
@@ -382,10 +385,10 @@
 
   window.changeLanguage = changeLanguage;
 
-  // Typewriter Effect Function
+  // typewriter Effect Function
   function typeWriterEffect(elementId, text) {
     let element = document.getElementById(elementId);
-    element.textContent = ""; // Clear existing text
+    element.textContent = ""; // clear existing text
     let i = 0;
 
     function type() {
@@ -399,20 +402,20 @@
     type();
   }
 
-  // Load stored language on page load (WITH typewriter effect)
+  // load stored language on page load (WITH typewriter effect)
   document.addEventListener("DOMContentLoaded", () => {
     let storedLang = localStorage.getItem("lang") || "pt";
-    updateLanguage(storedLang, true); // Enable typewriter effect on first load
+    updateLanguage(storedLang, true); // enable typewriter effect on first load
   });
 
-  // Language switch function (NO typewriter effect when switching)
+  // language switch function (NO typewriter effect when switching)
   function changeLanguage() {
     let currentLang = localStorage.getItem("lang") || "pt";
     let newLang =
       currentLang === "pt" ? "en" : currentLang === "en" ? "jp" : "pt";
 
     localStorage.setItem("lang", newLang);
-    updateLanguage(newLang, false); // No typewriter effect when switching languages
+    updateLanguage(newLang, false); // no typewriter effect when switching languages
     updateLanguageButton(newLang);
   }
 
@@ -427,19 +430,19 @@
       $main._hide();
     }
 
-    // Otherwise, check for a matching article.
+    // otherwise, check for a matching article.
     else if ($main_articles.filter(location.hash).length > 0) {
-      // Prevent default.
+      // prevent default.
       event.preventDefault();
       event.stopPropagation();
 
-      // Show article.
+      // show article.
       $main._show(location.hash.substr(1));
     }
   });
 
-  // Scroll restoration.
-  // This prevents the page from scrolling back to the top on a hashchange.
+  // scroll restoration.
+  // this prevents the page from scrolling back to the top on a hashchange.
   if ("scrollRestoration" in history) history.scrollRestoration = "manual";
   else {
     var oldScrollPos = 0,
@@ -456,13 +459,13 @@
       });
   }
 
-  // Initialize.
+  // initialize.
 
-  // Hide main, articles.
+  // hide main, articles.
   $main.hide();
   $main_articles.hide();
 
-  // Initial article.
+  // initial article.
   if (location.hash != "" && location.hash != "#")
     $window.on("load", function () {
       $main._show(location.hash.substr(1), true);

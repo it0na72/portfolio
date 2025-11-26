@@ -284,6 +284,7 @@
       classes: "AULAS",
       emailMessage: "Alguma dúvida? Manda-me um email",
       developed: "Criado por Giovani Oliveira",
+      download: "Faz o download do Japonês Descomplicado aqui!",
     },
     en: {
       greeting: "Hey! I'm Gio<span class='wave'>👋</span>",
@@ -293,6 +294,7 @@
       classes: "LESSONS",
       emailMessage: "Any questions? Send me an email",
       developed: "Developed by Giovani Oliveira",
+      download: "Download Japonês Descomplicado here!",
     },
     jp: {
       greeting: "どーも！ジオです<span class='wave'>👋</span>",
@@ -302,6 +304,8 @@
       classes: "レッスン",
       emailMessage: "お問い合わせはメールでお願いします",
       developed: "開発者: ジオバニ・オリベイラ",
+      download:
+        "こちらから『Japonês Descomplicado』をダウンロードしてください。",
     },
   };
 
@@ -345,6 +349,34 @@
     updateLanguageButton(storedLang);
   });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    // Create button container
+    const downloadBtn = document.createElement("a");
+    downloadBtn.id = "download";
+    // link to the packaged placeholder PDF
+    downloadBtn.href = "assets/files/Japones_Descomplicado.pdf";
+    downloadBtn.setAttribute("download", "Japones_Descomplicado.pdf");
+    downloadBtn.className = "button download-btn";
+    downloadBtn.style.marginTop = "20px";
+    // Set initial per-language text (use stored value or default 'pt')
+    const initialLang = localStorage.getItem("lang") || "pt";
+    if (translations[initialLang] && translations[initialLang].download) {
+      downloadBtn.textContent = translations[initialLang].download;
+    } else {
+      downloadBtn.textContent = "Download";
+    }
+
+    // Insert button under the header nav (so it appears below YouTube / Lessons)
+    const navElement = document.querySelector("#header nav");
+    if (navElement) navElement.insertAdjacentElement("afterend", downloadBtn);
+    else {
+      // fallback: insert after greeting
+      const greetingElement = document.getElementById("greeting");
+      if (greetingElement)
+        greetingElement.insertAdjacentElement("afterend", downloadBtn);
+    }
+  });
+
   function updateLanguage(lang) {
     document.getElementById("greeting").innerHTML =
       translations[lang]["greeting"];
@@ -386,6 +418,12 @@
       translations[lang]["emailMessage"];
     document.getElementById("developed").textContent =
       translations[lang]["developed"];
+
+    // update download button text if it exists
+    const dlBtn = document.getElementById("download");
+    if (dlBtn && translations[lang] && translations[lang].download) {
+      dlBtn.textContent = translations[lang].download;
+    }
   }
 
   window.changeLanguage = changeLanguage;

@@ -1381,6 +1381,18 @@ button {
   z-index: 1;
 }
 
+/* Ensure the header download button matches header nav typography */
+#header > a.download-btn,
+#header .download-btn {
+  font-family: "DotGothic16", sans-serif; /* same as #header nav */
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  line-height: 2.75rem;
+  height: 2.75rem;
+  padding: 0 1.25rem 0 1.35rem; /* match .button spacing */
+}
+
 #bg:before,
 #bg:after {
   content: "";

@@ -354,7 +354,11 @@
     const downloadAnchor = document.createElement("a");
     downloadAnchor.className = "header-download";
     downloadAnchor.id = "download";
-    downloadAnchor.href = "japonesdescomplicado.html"; // full page
+    // Point users to Stan.Store purchase page (open in new tab) instead of local page
+    downloadAnchor.href =
+      "https://stan.store/it0na/p/aula-de-60-minutos--japons-descomplicado";
+    downloadAnchor.target = "_blank";
+    downloadAnchor.rel = "noopener noreferrer";
 
     // Set initial per-language text (use stored value or default 'pt')
     const initialLang = localStorage.getItem("lang") || "pt";

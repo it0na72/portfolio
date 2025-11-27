@@ -304,8 +304,7 @@
       classes: "レッスン",
       emailMessage: "お問い合わせはメールでお願いします",
       developed: "開発者: ジオバニ・オリベイラ",
-      download:
-        "こちらから『Japonês Descomplicado』をダウンロードしてください。",
+      download: "こちらから『Japonês Descomplicado』をダウンロードしてください",
     },
   };
 

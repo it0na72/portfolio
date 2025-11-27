@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Japonês Descomplicado — Página</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Ensure the same site font is loaded so the page looks identical -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Force page to use the site's primary font & weights exactly */
+      html,
+      body,
+      main,
+      div {
+        font-family: "Source Sans Pro", sans-serif !important;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Source Sans Pro", sans-serif !important;
+      }
+      body {
+        font-weight: 300;
+      }
+      h1 {
+        letter-spacing: 0.5rem;
+        font-weight: 600;
+      }
+    </style>
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body>
+    <main
+      style="
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px;
+        /* match main site background (transparent so #bg shows through) */
+        background: transparent;
+        color: #fff;
+        position: relative;
+        z-index: 3;
+      "
+    >
+      <div
+        style="
+          max-width: 900px;
+          width: 100%;
+          text-align: center;
+          font-family: 'Source Sans Pro', sans-serif; /* match main page font */
+        "
+      >
+        <h1 style="font-size: 1.9rem; margin: 0 0 0.75rem">
+          Aqui tens o que procuras - Japonês Descomplicado + vídeo grátis bónus!
+        </h1>
+        <h3
+          style="
+            font-weight: 400;
+            color: #ddd;
+            margin: 0 0 1.5rem;
+            line-height: 1.4;
+          "
+        >
+          Este foi o livro que demorei meses a construir para que nunca tenhas
+          de procurar outro método de estudo de japonês em português. Para ti,
+          totalmente gratuito.
+        </h3>
+
+        <!-- Clear call-to-action text requested by user -->
+        <p style="margin: 1rem 0 1.25rem; font-size: 1.05rem; color: #fff">
+          Faz o download do Japonês Descomplicado aqui!
+        </p>
+        <div
+          style="
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+          "
+        >
+          <iframe
+            src="https://www.youtube.com/embed/klhARigitTU"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border: 0;
+            "
+          ></iframe>
+        </div>
+
+        <div style="margin-top: 1.75rem">
+          <a
+            class="button primary"
+            href="assets/files/Japones_Descomplicado.pdf"
+            download="Japones_Descomplicado.pdf"
+            >Descarregar PDF</a
+          >
+        </div>
+
+        <div style="margin-top: 1.5rem">
+          <a
+            class="button"
+            href="index.html"
+            style="
+              background: transparent;
+              border: 1px solid rgba(255, 255, 255, 0.12);
+            "
+            >Voltar</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

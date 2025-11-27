@@ -1383,7 +1383,9 @@ button {
 
 /* Ensure the header download button matches header nav typography */
 #header > a.download-btn,
-#header .download-btn {
+#header .download-btn,
+#header > a.header-download,
+#header .header-download {
   font-family: "DotGothic16", sans-serif; /* same as #header nav */
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -1391,6 +1393,22 @@ button {
   line-height: 2.75rem;
   height: 2.75rem;
   padding: 0 1.25rem 0 1.35rem; /* match .button spacing */
+  display: inline-block;
+  border: solid 1px #ffffff;
+  border-radius: 4px;
+  min-width: 7.5rem;
+  margin-top: 0.75rem; /* small gap beneath the nav */
+  text-align: center;
+}
+
+#header > a.header-download:hover,
+#header .header-download:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+#header > a.header-download:active,
+#header .header-download:active {
+  background-color: rgba(255, 255, 255, 0.175);
 }
 
 #bg:before,

@@ -350,30 +350,29 @@
   });
 
   document.addEventListener("DOMContentLoaded", () => {
-    // Create button container
-    const downloadBtn = document.createElement("a");
-    downloadBtn.id = "download";
-    // link to the packaged placeholder PDF
-    downloadBtn.href = "assets/files/Japones_Descomplicado.pdf";
-    downloadBtn.setAttribute("download", "Japones_Descomplicado.pdf");
-    downloadBtn.className = "button download-btn";
-    downloadBtn.style.marginTop = "20px";
+    // Create a download link that sits below the header nav (so it appears under YouTube / Lessons)
+    const downloadAnchor = document.createElement("a");
+    downloadAnchor.className = "header-download";
+    downloadAnchor.id = "download";
+    downloadAnchor.href = "japonesdescomplicado.html"; // full page
+
     // Set initial per-language text (use stored value or default 'pt')
     const initialLang = localStorage.getItem("lang") || "pt";
     if (translations[initialLang] && translations[initialLang].download) {
-      downloadBtn.textContent = translations[initialLang].download;
+      downloadAnchor.textContent = translations[initialLang].download;
     } else {
-      downloadBtn.textContent = "Download";
+      downloadAnchor.textContent = "Download";
     }
 
-    // Insert button under the header nav (so it appears below YouTube / Lessons)
+    // Insert the download link after the header nav so it shows below YouTube / Lessons
     const navElement = document.querySelector("#header nav");
-    if (navElement) navElement.insertAdjacentElement("afterend", downloadBtn);
+    if (navElement)
+      navElement.insertAdjacentElement("afterend", downloadAnchor);
     else {
       // fallback: insert after greeting
       const greetingElement = document.getElementById("greeting");
       if (greetingElement)
-        greetingElement.insertAdjacentElement("afterend", downloadBtn);
+        greetingElement.insertAdjacentElement("afterend", downloadAnchor);
     }
   });
 

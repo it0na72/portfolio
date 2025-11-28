@@ -1549,8 +1549,21 @@ body.is-preload #bg:before {
     font-size: 0.95rem; /* slightly larger for readability */
     height: auto; /* allow height to grow with wrapping */
     line-height: 1.4em;
+  }
+
+  /* keep a small fallback padding for narrower viewports */
   #wrapper {
     padding: 1rem;
+  }
+}
+
+/* Prevent ultra-wide stretching at large desktop sizes. Constrain wrapper and center it. */
+@media screen and (min-width: 1200px) {
+  #wrapper {
+    max-width: 1400px; /* comfortable reading width on large displays */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 }
 

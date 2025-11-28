@@ -355,7 +355,7 @@
     downloadAnchor.id = "download";
     // Point users to Stan.Store purchase page (open in new tab) instead of local page
     downloadAnchor.href =
-      "https://stan.store/it0na/p/aula-de-60-minutos--japons-descomplicado";
+      "https://stan.store/it0na/p/japones-descomplicado-livro";
     downloadAnchor.target = "_blank";
     downloadAnchor.rel = "noopener noreferrer";
 

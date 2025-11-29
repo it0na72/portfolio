@@ -351,7 +351,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     // Create a download link that sits below the header nav (so it appears under YouTube / Lessons)
     const downloadAnchor = document.createElement("a");
-    downloadAnchor.className = "header-download";
+    downloadAnchor.className = "headehttps://stan.store/it0na/p/japones-descomplicado-livror-download";
     downloadAnchor.id = "download";
     // Point users to Stan.Store purchase page (open in new tab) instead of local page
     downloadAnchor.href =

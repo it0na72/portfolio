@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://andreoliveira.pro">
-    <img src="images/logo.png" alt="Logo" width="100" height="100">
+    <img src="images/logo japones descomplicado.png" alt="Logo" width="100" height="100">
   </a>
 <h3 align="center">Gio's Portfolio Website</h3>
 
